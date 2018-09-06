@@ -1,5 +1,5 @@
 {
-    "name": "xgplayer",
+    "name": "xgplayer-jirengu",
     "version": "1.1.0",
     "description": "video player",
     "main": "./dist/index.js",
