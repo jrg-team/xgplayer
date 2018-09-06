@@ -64,6 +64,9 @@ class HlsJsPlayer extends Player {
     hls.on(Hls.Events.LEVEL_LOADED, (name, e) => {
       if (!hls.inited) {
         hls.inited = true
+        if (player.config.forceNoLive){
+          return
+        }
         if (e && e.details && !e.details.type) {
           util.addClass(player.root, 'xgplayer-is-live')
           const live = util.createDom('xg-live', '正在直播', {}, 'xgplayer-live')
